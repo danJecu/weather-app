@@ -1,6 +1,3 @@
-const API_KEY = '2b14fdeabd67bb3b98e477b1eb93fb50';
-
-
 const weatherContainer = document.getElementById('weather-container');
 const buttonSubmit = document.getElementById('submit');
 
@@ -33,7 +30,6 @@ document.getElementById('location').addEventListener('keypress', async function 
 
       let weather = await getWeather(location.lat, location.lon);
 
-      console.log(weather);
       let weatherIcon = `<img alt="icon" src="http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png"
     width="60" height="60" />`;
       let weatherDescription = `<h4>${weather.weather[0].main}</h4>`;
